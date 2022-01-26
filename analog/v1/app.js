@@ -1,9 +1,7 @@
-const hoursElement = document.querySelector(".hour-indicator")
-const minutesElement = document.querySelector(".minute-indicator")
-
-
+const hoursElement = document.getElementById("hour_hand");
+const minutesElement = document.getElementById("minute_hand");
 const secondsElement = document.getElementById("second_hand");
-const dateBox = document.getElementById("dateBox");
+const infoBox = document.getElementById("info");
 
 function animate() {
   const date = new Date();
@@ -13,11 +11,10 @@ function animate() {
   const second = date.getSeconds();
   let day = date.getDate()
 
-  hoursElement.style.strokeDasharray = `${hour} ${12 - hour}`;
-  minutesElement.style.strokeDasharray = `${minute} ${60 - minute}`;
-
+  hoursElement.setAttribute("transform", `rotate(${(360 / 12) * hour})`);
+  minutesElement.setAttribute("transform", `rotate(${(360 / 60) * minute})`);
   secondsElement.setAttribute("transform", `rotate(${(360 / 60) * second})`);
-  dateBox.textContent = day;
+  infoBox.textContent = day;
 
   requestAnimationFrame(animate);
 }

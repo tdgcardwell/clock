@@ -8,7 +8,7 @@ body {
   min-height: 90vh;
 }
 
-#info {
+.info {
   fill: #333;
   font-size: 20px;
   font-family: sans-serif;
@@ -22,16 +22,32 @@ body {
   stroke-dashoffset: 0.1;
 }
 
+.minute-indicator {
+  fill: transparent;
+  stroke: #683401;
+  stroke-width: 7;
+  stroke-dasharray: 25 35;
+  stroke-dashoffset: 15;
+}
+
+.hour-indicator {
+  fill: transparent;
+  stroke: #683401;
+  stroke-width: 7;
+  stroke-dasharray: 1 11;
+  stroke-dashoffset: 3;
+}
+
 .hour-marks {
   fill: transparent;
-  stroke: #fff;
+  stroke: #999;
   stroke-width: 7;
   stroke-dasharray: 0.2 4.8;
   stroke-dashoffset: 0.1;
 }
 
 .middle {
-  fill: #fff;
+  fill: #683401;
 }
 
 .hand {
@@ -45,5 +61,5 @@ body {
 }
 
 .hand--second {
-  stroke: #333;
+  stroke: #683401;
 }

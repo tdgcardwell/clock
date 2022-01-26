@@ -8,6 +8,21 @@
 
     <div class="container">
       <svg width="200" height="200" viewBox="-100 -100 200 200">
+
+        <circle class="minute-indicator"
+          cx="0"
+          cy="0"
+          r="80"
+          pathLength="60"
+        />
+
+        <circle class="hour-indicator"
+          cx="0"
+          cy="0"
+          r="90"
+          pathLength="12"
+        />
+
         <circle class="minute-marks"
           cx="0"
           cy="0"
@@ -25,17 +40,21 @@
         <circle class="middle"
           cx="0"
           cy="0"
-          r="1"
+          r="4"
           pathLength="60"
         />
 
         <g>
-          <text id="info" x="30" y="8">
+          <text id="dateBox" class="info" x="30" y="8">
             Text
+          </text>
+
+          <text id="otherBox" class="info" x="-60" y="8">
+            YES
           </text>
         </g>
 
-        <g id="hour_hand">
+        <!-- <g id="hour_hand">
           <line class="hand" x1="0" y1="0" x2="0" y2="-50" />
           <line class="hand hand--thick" x1="0" y1="-12" x2="0" y2="-50" />
         </g>
@@ -43,7 +62,7 @@
         <g id="minute_hand">
           <line class="hand" x1="0" y1="0" x2="0" y2="-80" />
           <line class="hand hand--thick" x1="0" y1="-12" x2="0" y2="-80" />
-        </g>
+        </g> -->
 
         <g id="second_hand">
           <line class="hand hand--second" x1="0" y1="12" x2="0" y2="-80" />
