@@ -3,12 +3,23 @@ const minutesElement = document.getElementById("minute_hand");
 const secondsElement = document.getElementById("second_hand");
 const infoBox = document.getElementById("info");
 
+const days = [
+  "MON",
+  "TUES",
+  "WEDS",
+  "THURS",
+  "FRI",
+  "SAT",
+  "SUN"
+];
+
 function animate() {
   const date = new Date();
 
   const hour = date.getHours() % 12;
   const minute = date.getMinutes();
   const second = date.getSeconds();
+  let dayOfWeek = date.getDay();
   let day = date.getDate()
 
   hoursElement.setAttribute("transform", `rotate(${(360 / 12) * hour})`);
