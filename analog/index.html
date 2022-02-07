@@ -9,11 +9,19 @@
     <div class="container">
       <svg width="200" height="200" viewBox="-100 -100 200 200">
 
+        <defs>
+          <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop id="color1" offset="0%"/>
+            <stop id="color2" offset="100%"/>
+          </linearGradient>
+        </defs>
+
         <circle class="minute-indicator"
           cx="0"
           cy="0"
           r="90"
           pathLength="60"
+          stroke="url(#linear)"
         />
 
         <circle class="hour-indicator"
@@ -21,6 +29,7 @@
           cy="0"
           r="80"
           pathLength="12"
+          stroke="url(#linear)"
         />
 
         <circle class="minute-marks"
@@ -49,7 +58,7 @@
             Text
           </text>
 
-          <text id="otherBox" class="info" x="-75" y="8">
+          <text id="otherBox" class="info" x="-65" y="8">
             YES
           </text>
         </g>
@@ -65,7 +74,7 @@
         </g> -->
 
         <g id="second_hand">
-          <line class="hand hand--second" x1="0" y1="12" x2="0" y2="-80" />
+          <line class="hand hand--second" x1="0" y1="12" x2="0" y2="-80"/>
         </g>
 
       </svg>

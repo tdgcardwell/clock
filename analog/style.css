@@ -22,9 +22,18 @@ body {
   stroke-dashoffset: 0.1;
 }
 
+#color1 {
+  stop-color: #f50;
+}
+
+#color2 {
+  stop-color: #f5f;
+}
+
+
+
 .minute-indicator {
   fill: transparent;
-  stroke: #683401;
   stroke-width: 7;
   stroke-dasharray: 25 35;
   stroke-dashoffset: 15;
@@ -32,7 +41,6 @@ body {
 
 .hour-indicator {
   fill: transparent;
-  stroke: #683401;
   stroke-width: 7;
   stroke-dasharray: 1 11;
   stroke-dashoffset: 3;
@@ -47,7 +55,7 @@ body {
 }
 
 .middle {
-  fill: #683401;
+  fill: #f5f;
 }
 
 .hand {
@@ -61,5 +69,5 @@ body {
 }
 
 .hand--second {
-  stroke: #683401;
+  stroke: #f50;
 }
